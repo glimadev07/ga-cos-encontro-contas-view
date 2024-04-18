@@ -1,5 +1,5 @@
 {
-  "name": "ga-cosseguro-gestao-view",
+  "name": "ga-cos-encontro-contas-view",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -20,8 +20,8 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
-    "bootstrap": "^5.3.3",
-    "ga-cosseguro-gestao-view": "^1.0.0"
+    "back-office-view-corretor": "^0.0.0",
+    "bootstrap": "^5.3.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.13",

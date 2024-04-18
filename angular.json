@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ga-cosseguro-gestao-view": {
+    "ga-cos-encontro-contas-view": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ga-cosseguro-gestao-view",
+            "outputPath": "dist/ga-cos-encontro-contas-view",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ga-cosseguro-gestao-view:build:production"
+              "browserTarget": "gga-cos-encontro-contas-view:build:production"
             },
             "development": {
-              "browserTarget": "ga-cosseguro-gestao-view:build:development"
+              "browserTarget": "gga-cos-encontro-contas-view:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ga-cosseguro-gestao-view:build"
+            "browserTarget": "gga-cos-encontro-contas-view:build"
           }
         },
         "test": {
