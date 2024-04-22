@@ -1,4 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.myapp-no-padding-dialog .mat-dialog-container {
+  padding: 0;
+}
+
+.monetary{
+  text-align: right;
+}
+.descriptiveText{
+  text-align: start;
+}
+.infoValue{
+  text-align: center;
+}
+
+input{
+  padding-left: 8px;
+}
+
+

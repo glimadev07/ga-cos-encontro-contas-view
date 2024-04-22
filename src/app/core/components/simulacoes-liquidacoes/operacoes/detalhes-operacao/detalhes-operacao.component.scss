@@ -1,0 +1,40 @@
+.container-header {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.center {
+  text-align: center !important ;
+}
+
+th {
+  font-size: 20px;
+}
+
+td {
+  font-size: 17px;
+  color: #9c9c9c;
+}
+
+.bd-bottom {
+  border-bottom: 2px solid #dbdbdb;
+}
+
+.bd-right {
+  border-right: 2px solid #dbdbdb;
+}
+
+.header-spans {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+
+  span {
+    border: 1px solid #cdcdcd;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    border-radius: 3px;
+  }
+}

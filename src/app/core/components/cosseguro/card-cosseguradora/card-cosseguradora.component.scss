@@ -1,0 +1,199 @@
+.container-all {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  padding: 25px;
+  margin: 35px;
+  color: #40bca5;
+}
+.infos {
+  display: flex;
+  // justify-content: space-between;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  padding: 20px 25px;
+}
+.infos-input {
+  display: flex;
+  // width: 90%;
+  gap: 30px;
+  input {
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: none !important;
+    width: 90%;
+    height: 34px;
+  }
+}
+.infos-button {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  // width: 30%;
+  padding-right: 34px;
+}
+
+.camposEspandido {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cdcdcd;
+  padding: 25px;
+  border-radius: 3px;
+  gap: 20px 0;
+
+  input {
+    border-radius: 5px;
+    border: 1px solid #cdcdcd;
+    width: 90%;
+    height: 34px;
+    outline: none;
+    box-shadow: none !important;
+  }
+}
+
+.buttonClear {
+  background-color: #009074;
+  color: #fff;
+  font-size: 30px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+:host {
+  ::ng-deep {
+    .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+      line-height: 30px;
+    }
+  }
+}
+
+.btn {
+  color: white;
+  margin-right: 10px;
+}
+
+.primary-button {
+  background-color: #009074;
+}
+
+.secondary-button {
+  background-color: #004a90;
+}
+
+.top-input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #272727;
+  border-radius: 0;
+}
+
+.top-input::placeholder {
+  color: #40bca5;
+  opacity: 1;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.table-header {
+  box-shadow: -10px -6px 19px -6px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+}
+
+.table-body {
+  box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.2)
+}
+
+.cell {
+  border: 1px solid rgb(236, 236, 236);
+  min-height: 60px;
+  text-align: center;
+  display: grid;
+  align-items: center;
+}
+
+.header-cell {
+  color: #000;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.body-cell {
+  color: rgb(172, 172, 172);
+  font-size: 17px;
+}
+
+.rightmost-cell {
+  border-right: none;
+}
+
+.leftmost-cell {
+  border-left: none;
+}
+
+.buttons-div {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0 0 25px 0;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.green {
+  color: #009074;
+}
+
+.clickable-icon {
+  font-size: 35px;
+}
+
+.clickable-icon:hover {
+  cursor: pointer;
+  opacity: 70%;
+  transition: .3s;
+}
+
+.buttonDownload {
+  background-color: #009074;
+  color: #fff;
+  width: 35px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+th {
+  font-size: 20px;
+}
+
+td {
+  font-size: 17px;
+  color: #9c9c9c;
+}
+
+.bd-bottom {
+  border-bottom: 2px solid #dbdbdb;
+}
+
+.bd-right {
+  border-right: 2px solid #dbdbdb;
+}
+
+

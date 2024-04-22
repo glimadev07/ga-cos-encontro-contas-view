@@ -1,0 +1,59 @@
+:host ::ng-deep {
+  .mat-dialog-container.no-padding-dialog {
+    padding: 0 !important;
+  }
+  .mat-expansion-panel-header-title {
+    color: #40bca5;
+  }
+  .mat-expansion-panel-header-title {
+    color: #40bca5;
+  }
+  .mat-cell,
+  .mat-header-cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+
+.container-all {
+  padding: 10px 20px;
+  color: #40bca5;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 25px 0;
+  gap: 15px;
+}
+
+.buttonDownload {
+  background-color: #23c5ae;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #23c5ae;
+}
+
+.buttonColorInteraction {
+  background-color: #23c5ae;
+  color: #fff;
+  border-color: #23c5ae;
+}
+
+.monetary {
+  text-align: right !important;
+}
+.descriptiveText {
+  text-align: start !important;
+}
+.infoValue {
+  text-align: center !important;
+}

@@ -1,0 +1,18 @@
+<div>
+  <div class="modal-header">
+    <span class="modal-title" style="color: #00a587;"><strong>Nova Simulação</strong></span>
+    <button mat-icon-button (click)="fecharModal()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <p style="color: #00a587; padding-left: 20px;">Qual data deseja realizar a simulação</p>
+  <div class="container">
+    <mat-form-field appearance="fill">
+      <mat-label>MM/DD/YYYY</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <button (click)="openModalResult()" mat-raised-button style="background: #23c5ae; color: #fff; height: 40px;">Prosseguir</button>
+  </div>
+</div>

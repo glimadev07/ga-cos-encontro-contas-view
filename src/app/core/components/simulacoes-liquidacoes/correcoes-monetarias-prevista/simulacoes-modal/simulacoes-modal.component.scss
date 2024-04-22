@@ -1,0 +1,101 @@
+:host ::ng-deep {
+  .mat-form-field-flex {
+    padding-top: 10px;
+  }
+
+  .mat-form-field-appearance-fill .mat-form-field-infix {
+    padding: 2px 0px;
+  }
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 4px;
+    padding: 0 10px;
+  }
+
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    border: 1px solid #cdcdcd;
+  }
+  .mat-form-field-underline {
+    width: 0px;
+  }
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-flex {
+    margin-top: 12px;
+  }
+  .mat-dialog-container.no-padding-dialog {
+    padding: 0 !important;
+  }
+}
+.d-none {
+  display: none;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.custom-label {
+  position: absolute;
+  top: -1px;
+  left: -5px;
+  padding: 0 5px;
+  font-size: 9px;
+  color: #00000085;
+  background-color: white;
+}
+.button {
+  border: 0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: #fff;
+  padding: 3px 7px;
+  width: 80px;
+}
+
+.d-none {
+  display: none;
+}
+
+.button:hover {
+  color: white;
+}
+
+.execute-button:hover {
+  color: white;
+}
+
+.update-button:hover {
+  color: white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 10px 0;
+  margin-left: 0px;
+  gap: 15px;
+}
+
+.label {
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background-color: #eeeeee;
+  border-radius: 8px 0px 0px 8px;
+  padding: 4px 7px 6px 10px;
+}
+
+// ::ng-deep .input {
+//   margin-right: 10px !important;
+//   background: #009074;
+// }

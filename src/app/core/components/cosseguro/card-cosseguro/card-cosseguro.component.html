@@ -1,0 +1,84 @@
+  <div class="container-all">
+    <div style="padding: 15px 0; display: flex; align-items: center; gap: 10px;">
+      <h3>Consultar por:</h3>
+      <mat-button-toggle-group style="height: 40px; display: flex; align-items: center;" name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value="principal" (click)="pesquisaBasica()">Principal</mat-button-toggle>
+        <mat-button-toggle value="filtroBusca" (click)="espandirPesquisa()">+ Filtro de Busca</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+
+    <form [formGroup]="cosseguroForm" (ngSubmit)="onSubmit()">
+      <div class="infos" [ngClass]="{'infos': !filtroPesquisa, 'infosExpand': filtroPesquisa}">
+        <div class="infos-input col-sm-3">
+          <input type="text"  placeholder="Codigo" formControlName="codigo"/>
+        </div>
+          <div class="infos-input col-sm-6">
+          <input type="text" placeholder="Nome" formControlName="nome" style="width: 95%;"/>
+        </div>
+        <div class="infos-button col-sm-3">
+          <mat-icon class="buttonClear" (click)="clear()">cleaning_services</mat-icon>
+          <button mat-raised-button color="primary" class="buttonColorInteraction">Pesquisar</button>
+        </div>
+      </div>
+
+      <div class="camposEspandido" *ngIf="filtroPesquisa">
+      <div style="display: flex; ">
+        <div class="col-sm-3">
+          <input class="spanPadding" type="text" placeholder="Status" formControlName="status" />
+        </div>
+        <div class="col-sm-3">
+          <input type="text" placeholder="Tipo-Operação" formControlName="tipoOperacao" />
+        </div>
+        <div class="col-sm-3">
+          <input type="text" placeholder="Carta" formControlName="carta" />
+        </div>
+        <div class="col-sm-3">
+          <input type="text" placeholder="Data Status" formControlName="dataStatus" />
+        </div>
+      </div>
+       <div style="display: flex; ">
+        <div class="col-sm-3">
+          <input type="text" placeholder="Ramo" formControlName="ramo" />
+        </div>
+        <div class="col-sm-3">
+          <input type="text" placeholder="Apólice/Sub-Apólice" formControlName="apoliceSubApolice" />
+        </div>
+        <div class="col-sm-3">
+          <input type="text" placeholder="Endosso" formControlName="endosso" />
+        </div>
+        <div class="col-sm-3">
+          <input type="text" placeholder="Pano" formControlName="Pano" />
+        </div>
+      </div>
+      <div style="display: flex;">
+        <div class="col-sm-3">
+          <input type="text" placeholder="Sinistro" formControlName="sinistro" />
+        </div>
+        <div class="col-sm-3">
+          <input type="text" placeholder="Valor (R$)" formControlName="valor" />
+        </div>
+        <div class="col-sm-3">
+          <input type="text" placeholder="Nº de Ordem" formControlName="numeroOrdem" />
+        </div>
+        <div class="col-sm-3">
+          <input type="text" placeholder="Número" formControlName="numero" />
+        </div>
+      </div>
+      <div style="display: flex; ">
+        <div class="col-sm-3">
+          <input type="text" placeholder="Sinistro Oficial" formControlName="sinistroOficial" />
+        </div>
+        <div class="col-sm-3">
+          <input type="text" placeholder="Data Pagamento Plataforma" formControlName="dataPagPlataforma" />
+        </div>
+        <div class="col-sm-3">
+          <input type="text" placeholder="Cliente" formControlName="cliente" />
+        </div>
+        <div class="col-sm-3">
+          <input type="text" placeholder="C/D" formControlName="cd" />
+        </div>
+      </div>
+    </div>
+
+    </form>
+  </div>

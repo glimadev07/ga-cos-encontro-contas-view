@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "gga-cos-encontro-contas-view:build:production"
+              "browserTarget": "ga-cos-encontro-contas-view:build:production"
             },
             "development": {
-              "browserTarget": "gga-cos-encontro-contas-view:build:development"
+              "browserTarget": "ga-cos-encontro-contas-view:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gga-cos-encontro-contas-view:build"
+            "browserTarget": "ga-cos-encontro-contas-view:build"
           }
         },
         "test": {
@@ -105,5 +105,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f2843476-b4ac-4cdf-9578-e450b28fd871"
   }
 }

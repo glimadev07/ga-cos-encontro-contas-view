@@ -1,0 +1,88 @@
+<div class="container-all" style="padding: 1px;">
+  <div class="container-all" style="padding-top: 10px;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+      <div class="container-fluid">
+        <div class="row">
+          <h4>Cosseguradoras</h4>
+        </div>
+        <div class="row">
+          <div class="col-sm-3">
+            <input class="form-control top-input" type="text" placeholder="Código:" formControlName="codigo" />
+          </div>
+          <div class="col-sm-6">
+            <input class="form-control top-input" type="text" placeholder="Nome:" formControlName="nome" />
+          </div>
+          <div class="col-sm-3 buttons-div">
+            <mat-icon class="buttonDownload">archive</mat-icon>
+            <button mat-raised-button class="btn primary-button" color="primary">Lanç. Manual</button>
+            <button mat-raised-button class="btn secondary-button" color="primary"
+              routerLink="simulacoes">Simulação</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right" style="padding-left: 0 !important;"> Status </th>
+        <td mat-cell *matCellDef="let element" class="center bd-right" style="padding-left: 0 !important;"> {{ element.status }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="tipoOperacao">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Tipo Operação </th>
+        <td mat-cell *matCellDef="let element" class="center bd-right"> {{element.tipoOperacao}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="carta">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Carta </th>
+        <td mat-cell *matCellDef="let element" class="center bd-right"> {{element.carta}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="dtStatus">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Data Status </th>
+        <td mat-cell *matCellDef="let element" class="center bd-right"> {{element.dtStatus}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ramo">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Ramo </th>
+        <td mat-cell *matCellDef="let element" class="center bd-right"> {{element.ramo}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="apoliceSubapolice">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Apólice/Sub-Apólice </th>
+        <td mat-cell *matCellDef="let element" class="center bd-right"> {{ element.apoliceSubapolice }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="endosso">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Endosso </th>
+        <td mat-cell *matCellDef="let element" class="center bd-right"> {{ element.endosso }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="parc">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Parc. </th>
+        <td mat-cell *matCellDef="let element" class="center bd-right"> {{ element.parc }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sinistro">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Sinistro </th>
+        <td mat-cell *matCellDef="let element" class="center bd-right"> {{ element.sinistro }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="valor">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Valor </th>
+        <td mat-cell *matCellDef="let element" class="center bd-right"> {{ element.valor }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="detalhes">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom" style="padding-right: 0 !important;"> Detalhes </th>
+        <td mat-cell *matCellDef="let element" class="center" style="padding-right: 0 !important;">
+          <mat-icon class="green clickable-icon" (click)="openModal()">list</mat-icon>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
