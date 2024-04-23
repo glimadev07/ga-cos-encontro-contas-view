@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
-import { CosseguradoraModalComponent } from './cosseguradora-modal/cosseguradora-modal.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-cosseguradora',
@@ -33,7 +32,7 @@ export class CardCosseguradoraComponent implements OnInit {
     }
   ];
 
-  constructor(private formBuilder: UntypedFormBuilder, private dialog: MatDialog) { }
+  constructor(private formBuilder: UntypedFormBuilder, private router:Router) { }
 
   ngOnInit(): void {
     this.cosseguroForm = this.formBuilder.group({
@@ -98,15 +97,7 @@ export class CardCosseguradoraComponent implements OnInit {
     });
   }
 
-  openModal() {
-
-    this.dialog.open(CosseguradoraModalComponent, {
-      panelClass: 'myapp-no-padding-dialog',
-      maxWidth: '95vw',
-      width: '100%',
-      height: '95%',
-
-        });
+  navigate() {
+    this.router.navigate(['/detalhes']);
   }
-
 }

@@ -79,11 +79,7 @@
 }
 
 .primary-button {
-  background-color: #009074;
-}
-
-.secondary-button {
-  background-color: #004a90;
+  background-color: #23c5ae;
 }
 
 .top-input {
@@ -102,12 +98,7 @@
 }
 
 .table-header {
-  box-shadow: -10px -6px 19px -6px rgba(0, 0, 0, 0.2);
   margin-top: 30px;
-}
-
-.table-body {
-  box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.2)
 }
 
 .cell {
@@ -149,11 +140,11 @@
 }
 
 .green {
-  color: #009074;
+  color: #23c5ae;
 }
 
 .clickable-icon {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .clickable-icon:hover {
@@ -163,7 +154,7 @@
 }
 
 .buttonDownload {
-  background-color: #009074;
+  background-color: #23c5ae;
   color: #fff;
   width: 35px;
   height: 36px;
@@ -188,12 +179,24 @@ td {
   color: #9c9c9c;
 }
 
+.bd-top {
+  border-top: 2px solid #dbdbdb;
+}
+
 .bd-bottom {
   border-bottom: 2px solid #dbdbdb;
 }
 
 .bd-right {
   border-right: 2px solid #dbdbdb;
+}
+
+.bd-left {
+  border-left: 2px solid #dbdbdb;
+}
+
+.mat-elevation-z8 {
+  box-shadow: none;
 }
 
 

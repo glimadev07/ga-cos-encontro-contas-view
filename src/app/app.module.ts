@@ -29,14 +29,11 @@ import { SinistroComponent } from './core/components/sinistro/sinistro.component
 import { ApoliceComponent } from './core/components/apolice/apolice.component';
 import { ComissaoComponent } from './core/components/comissao/comissao.component';
 import { DetalhesOperacaoComponent } from './core/components/simulacoes-liquidacoes/operacoes/detalhes-operacao/detalhes-operacao.component';
-import { CosseguradoraModalComponent } from './core/components/cosseguro/card-cosseguradora/cosseguradora-modal/cosseguradora-modal.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HomeComponent } from './core/components/home/home.component';
-import {MatStepperModule} from '@angular/material/stepper';
+import { MatStepperModule } from '@angular/material/stepper';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-
-
-
+import { DetalhesComponent } from './core/components/detalhes/detalhes.component';
 
 @NgModule({
   declarations: [
@@ -54,8 +51,8 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
     ApoliceComponent,
     ComissaoComponent,
     DetalhesOperacaoComponent,
-    CosseguradoraModalComponent,
-    HomeComponent
+    HomeComponent,
+    DetalhesComponent
   ],
   imports: [
     BrowserModule,

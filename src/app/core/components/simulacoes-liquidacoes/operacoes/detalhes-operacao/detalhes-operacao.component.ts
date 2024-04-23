@@ -20,7 +20,7 @@ const mocks = [
 })
 export class DetalhesOperacaoComponent implements OnInit {
 
-  displayedColumns: string[] = ['cd','nrOrdem', 'numero', 'sinistro', 'dtPgPlat', 'cliente'];
+  displayedColumns: string[] = ['cd', 'nrOrdem', 'numero', 'sinistro', 'dtPgPlat', 'cliente'];
   dataSource = new MatTableDataSource<any>([]);
 
   constructor() { }

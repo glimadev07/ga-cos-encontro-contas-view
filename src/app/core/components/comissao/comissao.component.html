@@ -1,39 +1,46 @@
-<div class="container-all">
-  <h5>Comissões (em R$) </h5>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div class="container-header">
+          <h5>Comissões (em R$)</h5>
+        </div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
 
-    <ng-container matColumnDef="premio">
-      <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Prêmio </th>
-      <td mat-cell *matCellDef="let element" class="center bd-bottom bd-right"> {{element.premio}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="comissao">
-      <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Comissão </th>
-      <td mat-cell *matCellDef="let element" class="center bd-bottom bd-right"> {{element.comissao}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="proLabore">
-      <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Pró-Labore </th>
-      <td mat-cell *matCellDef="let element" class="center bd-bottom bd-right"> {{element.proLabore}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="agenciamento">
-      <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Agenciamento </th>
-      <td mat-cell *matCellDef="let element" class="center bd-bottom bd-right"> {{element.agenciamento}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="rdo">
-      <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Rdo </th>
-      <td mat-cell *matCellDef="let element" class="center bd-bottom bd-right"> {{element.rdo}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="rdoCosseguradora">
-      <th mat-header-cell *matHeaderCellDef class="center bd-bottom"> Rdo Cosseguradora </th>
-      <td mat-cell *matCellDef="let element" class="center bd-bottom"> {{element.rdoCosseguradora}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-</div>
-
+      <ng-container matColumnDef="premio">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Prêmio </th>
+        <td mat-cell *matCellDef="let element" class="center bd-bottom bd-right"> {{element.premio}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="comissao">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Comissão </th>
+        <td mat-cell *matCellDef="let element" class="center bd-bottom bd-right"> {{element.comissao}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="proLabore">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Pró-Labore </th>
+        <td mat-cell *matCellDef="let element" class="center bd-bottom bd-right"> {{element.proLabore}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="agenciamento">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Agenciamento </th>
+        <td mat-cell *matCellDef="let element" class="center bd-bottom bd-right"> {{element.agenciamento}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="rdo">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Rdo </th>
+        <td mat-cell *matCellDef="let element" class="center bd-bottom bd-right"> {{element.rdo}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="rdoCosseguradora">
+        <th mat-header-cell *matHeaderCellDef class="center bd-bottom"> Rdo Cosseguradora </th>
+        <td mat-cell *matCellDef="let element" class="center bd-bottom"> {{element.rdoCosseguradora}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</mat-expansion-panel>
+</mat-accordion>
