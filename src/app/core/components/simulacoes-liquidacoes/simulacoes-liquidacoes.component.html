@@ -1,11 +1,32 @@
-<div class="titulo">
-  <div style="display: flex; justify-content: space-between; align-items: center; padding: 0;">
-    <h1 style="padding: 25px 0 0 34px;">Simulaçoes/Liquidações</h1>
-    <mat-icon class="buttonBackSpace" routerLink="">keyboard_backspace</mat-icon>
-  </div>
-  <hr class="hrTitulo">
+<div class="container-all">
 
-  <div class="container-all">
+<div class="container-titulo">
+  <div class="col-12 d-flex ">
+
+    <div class="col-3">
+      <span>Cia: </span>
+      <p> 3 - Tokio Marine Seguradora S.A</p>
+    </div>
+    <div class="col-3">
+      <span>Cosseg: </span>
+      <p>1235 Fulano da silva</p>
+    </div>
+    <div class="col-2">
+      <span>Data de Inclusão</span>
+      <p>01/11/2023</p>
+    </div>
+    <div class="col-2">
+      <span>Usuário Responsável</span>
+      <p>ADMACX</p>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-start">
+      <button mat-raised-button class="buttonColorInteraction">Liquidada</button>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container-conteudo">
     <div class="divisao" style="border-radius: 8px 8px 0px 0px">
       <app-simulacoes></app-simulacoes>
     </div>
@@ -16,4 +37,5 @@
       <app-correcoes-monetarias-prevista></app-correcoes-monetarias-prevista>
     </div>
   </div>
+
 </div>

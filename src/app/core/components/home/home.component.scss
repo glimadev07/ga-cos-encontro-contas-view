@@ -1,3 +1,61 @@
+:host ::ng-deep {
+
+  .mat-vertical-content{
+    padding: 0;
+  }
+  .mat-vertical-stepper-header {
+    padding: 24px 0px;
+    // pointer-events: none !important;
+  }
+  .mat-step-text-label {
+    color: #fff;
+  }
+  .mat-stepper-vertical {
+    background-color: transparent;
+  }
+  .mat-vertical-content-container{
+    margin-left: 11px;
+  }
+  .mat-stepper-vertical-line{
+    flex: none !important;
+  }
+  .mat-stepper-vertical-line::before{
+    border-left-style: dashed;
+    border-color: white;
+  }
+
+  .mat-step-icon-selected {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+
+  .mat-step-icon{
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+
+  .mat-step-icon-state-done{
+    background-color: #00a587;
+    border: 1px solid white;
+    border-radius: 50%;
+
+  }
+  .mat-step-icon-state-edit {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+}
+.nav-config {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  // padding: 15px 0 0 15px;
+  align-items: center;
+}
+
 .custom-step-label {
   font-size: 16px;
   font-weight: bold;
@@ -6,21 +64,23 @@
 
 .container-all {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  gap: 20px;
+  margin: 10px;
 }
 
 .container-nav {
   background-color: #284137;
-  width: 20%;
-  margin: 10px;
+  width: 100%;
   padding: 15px;
   border-radius: 8px;
   color: #fff;
+  height: 100%;
 }
 
 .container-conteudo {
   width: 75%;
-  margin: 10px;
   border-radius: 8px;
+  height: 100%;
 }

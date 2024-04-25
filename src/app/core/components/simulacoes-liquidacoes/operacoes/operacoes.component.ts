@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
 const mocks = [
@@ -170,6 +171,15 @@ export class OperacoesComponent implements OnInit {
 
   displayedColumns: string[] = ['numero', 'tipo', 'dtStatus', 'ramo','apoliceSubApol','endosso','parc','sinistrado','valor','cd'];
   dataSource = new MatTableDataSource<any>([]);
+
+  pageSizeOptions: number[] = [5, 10, 20];
+
+  @ViewChild(MatPaginator)
+  paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 
   constructor() { }
 

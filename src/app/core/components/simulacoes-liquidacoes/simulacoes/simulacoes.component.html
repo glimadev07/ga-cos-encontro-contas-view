@@ -1,15 +1,4 @@
 <div class="container-all">
-  <div class="container-header">
-    <div class="header-spans">
-      <span class="col-sm-1"> Cia </span>
-      <span class="col-sm-3"> Tokio Marine Suguradora S.A </span>
-      <span class="col-sm-1"> Cosseg. </span>
-      <span class="col-sm-2"> RADU HARLOW PLEWA </span>
-      <span class="col-sm-2"> Dt. Incusão </span>
-      <span class="col-sm-2"> Usuário Responsável </span>
-    </div>
-    <button mat-raised-button class="buttonColorInteraction">Liquidada</button>
-  </div>
 
   <mat-accordion>
     <mat-expansion-panel>
@@ -18,8 +7,7 @@
           <h5>Simulações:</h5>
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <div class="container-table">
-        <div class="boxShadow">
+      <div class="container-table col-12">
           <div style="display: flex; text-align: center;" class="col-12">
             <div class="col-5"></div>
             <div class="col-2">
@@ -92,8 +80,11 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
           </table>
+
+          <mat-paginator [pageSizeOptions]="pageSizeOptions" showFirstLastButtons
+            aria-label="Select page of periodic elements">
+          </mat-paginator>
         </div>
-      </div>
     </mat-expansion-panel>
   </mat-accordion>
 </div>

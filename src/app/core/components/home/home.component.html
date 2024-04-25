@@ -1,15 +1,30 @@
-<div class="container-all">
-  <div class="container-nav">
-
-    <div class="nav-config" style="display: flex; flex-direction: column;">
-
-      <div style="padding: 15px 0 0 15px;">
-        <p>Navegação</p>
-      </div>
-
-    </div>
+<div class="container-nav">
+  <div class="nav-config">
+    <p>Navegação</p>
   </div>
-  <div class="container-conteudo">
-    <app-cosseguro> </app-cosseguro>
-  </div>
+
+  <section>
+    <mat-stepper [@.disabled]="true" orientation="vertical" linear #stepper>
+      <mat-step completed="false" label="Consulta" state="edit">
+      </mat-step>
+
+      <mat-step completed="false" label="Simulações/Liquidações" state="edit">
+      </mat-step>
+
+      <mat-step completed="false" label="Resultado da Simulação" state="edit">
+      </mat-step>
+
+      <ng-template matStepperIcon="none">
+        <mat-icon></mat-icon>
+      </ng-template>
+      <ng-template matStepperIcon="done">
+        <mat-icon>done</mat-icon>
+      </ng-template>
+      <ng-template matStepperIcon="edit">
+        <mat-icon>edit</mat-icon>
+      </ng-template>
+
+    </mat-stepper>
+  </section>
+
 </div>

@@ -7,8 +7,9 @@
           <h5>Correções Monetárias Previstas: </h5>
         </mat-panel-title>
       </mat-expansion-panel-header>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 col-12">
+      <div class="container-table">
 
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 col-12">
     <ng-container matColumnDef="seq">
       <th mat-header-cell *matHeaderCellDef class="col-1"> Seq. </th>
       <td mat-cell *matCellDef="let element"> {{element.seq}} </td>
@@ -68,6 +69,9 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
   </table>
+  <mat-paginator [pageSizeOptions]="pageSizeOptions" showFirstLastButtons aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>
 </mat-expansion-panel>
 </mat-accordion>
   <div class="footer-buttons">
