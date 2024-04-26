@@ -3,12 +3,12 @@ import { MatTableDataSource } from '@angular/material/table';
 
 const mocks = [
   {
-    premio: 'xxxxxxxxxx',
-    comissao: 'xxxxxxxxxx',
-    proLabore: 'xxxxxxxxxx',
-    agenciamento: 'xxxxxxxxxx',
-    rdo: 'xxxxxxxxxx',
-    rdoCosseguradora: 'xxxxxxxxxx'
+    status: 'ATV',
+    tipoOperacao: '12 - 1',
+    carta: '1234',
+    dtStatus: '01/11/23',
+    ramo: '3',
+    apoliceSubapolice: '123653434'
   }
 ];
 
@@ -19,7 +19,7 @@ const mocks = [
 })
 export class ComissaoComponent implements OnInit {
 
-  displayedColumns: string[] = ['premio','comissao', 'proLabore', 'agenciamento', 'rdo', 'rdoCosseguradora'];
+  displayedColumns: string[] = ['status','tipoOperacao', 'carta', 'dtStatus', 'ramo', 'apoliceSubapolice'];
   dataSource = new MatTableDataSource<any>([]);
 
   constructor() { }
