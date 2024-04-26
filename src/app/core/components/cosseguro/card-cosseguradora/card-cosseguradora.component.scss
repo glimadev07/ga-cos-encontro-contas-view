@@ -4,6 +4,7 @@
   padding: 25px;
   margin: 35px;
   color: #40bca5;
+  background-color: #fff;
 }
 .infos {
   display: flex;
@@ -80,6 +81,8 @@
 
 .primary-button {
   background-color: #23c5ae;
+  font-size: 14px;
+  padding-left: min(15px, 5%);
 }
 
 .top-input {
@@ -171,7 +174,7 @@ table {
 }
 
 th {
-  font-size: 20px;
+  font-size: 17px;
 }
 
 td {
@@ -180,19 +183,27 @@ td {
 }
 
 .bd-top {
-  border-top: 2px solid #dbdbdb;
+  border-top: 1px solid #dddddd;
 }
 
 .bd-bottom {
-  border-bottom: 2px solid #dbdbdb;
+  border-bottom: 1px solid #dddddd;
+}
+
+.bd-bottom-none {
+  border-bottom: none;
 }
 
 .bd-right {
-  border-right: 2px solid #dbdbdb;
+  border-right: 1px solid #dddddd;
 }
 
 .bd-left {
-  border-left: 2px solid #dbdbdb;
+  border-left: 1px solid #dddddd;
+}
+
+.bd-top-left-radius {
+  border-top-left-radius: 15px;
 }
 
 .mat-elevation-z8 {

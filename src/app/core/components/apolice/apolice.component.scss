@@ -5,14 +5,14 @@
   padding-bottom: 20px;
   padding-top: 20px;
   margin-top: 10px;
-  color: #23c5ae;
+  color: #0da36c;
 }
 .center {
   text-align: center !important ;
 }
 
 th {
-  font-size: 20px;
+  font-size: 17px;
 }
 
 td {
@@ -20,12 +20,8 @@ td {
   color: #9c9c9c;
 }
 
-.bd-bottom {
-  border-bottom: 2px solid #dbdbdb;
-}
-
-.bd-right {
-  border-right: 2px solid #dbdbdb;
+.bd-bottom-none {
+  border-bottom: none;
 }
 
 .header-spans {
