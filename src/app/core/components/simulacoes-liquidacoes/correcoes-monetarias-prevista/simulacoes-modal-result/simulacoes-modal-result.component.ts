@@ -1,6 +1,7 @@
 import { SelectionModel } from '@angular/cdk/collections';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
 
@@ -111,8 +112,16 @@ export class SimulacoesModalResultComponent implements OnInit {
   mocksCalculator: any;
   data: number[] = [];
 
+  pageSizeOptions: number[] = [5, 10, 20];
 
-  constructor(public dialogRef: MatDialogRef<SimulacoesModalResultComponent>) { }
+  @ViewChild(MatPaginator)
+  paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+
+  constructor() { }
 
   ngOnInit(): void {
     this.displayedColumns = ['select', 'ramo', 'cAceito', 'cCecido', 'cAceito2', 'cCecido2', 'cAceito3', 'cCecido3', 'totalPagar', 'totalReceber', 'resultadoFinal'];
@@ -124,9 +133,7 @@ export class SimulacoesModalResultComponent implements OnInit {
     this.getTotalCost()
   }
 
-  fecharModal(): void {
-    this.dialogRef.close();
-  }
+
 
   getTotalCost() {
     const array = ['cAceito', 'cCecido', 'cAceito2', 'cCecido2', 'cAceito3', 'cCecido3', 'totalPagar', 'totalReceber', 'resultadoFinal'];

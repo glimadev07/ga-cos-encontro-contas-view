@@ -18,17 +18,17 @@ export class CardCosseguradoraComponent implements OnInit {
 
   mocks = [
     {
-      status: 'xxxxxxxxxx',
-      tipoOperacao: 'xxxxxxxxxx',
-      carta: 'xxxxxxxxxx',
-      dtStatus: 'xxxxxxxxxx',
-      ramo: 'xxxxxxxxxx',
-      apoliceSubapolice: 'xxxxxxxxxx',
-      endosso: 'xxxxxxxxxx',
-      parc: 'xxxxxxxxxx',
-      sinistro: 'xxxxxxxxxx',
-      valor: 'xxxxxxxxxx',
-      detalhes: 'xxxxxxxxxx'
+      status: 'ATV',
+      tipoOperacao: '12 - 1',
+      carta: '1234',
+      dtStatus: '01/11/23',
+      ramo: '3',
+      apoliceSubapolice: '123653434',
+      endosso: '213',
+      parc: '10%',
+      sinistro: '123',
+      valor: 'R$ 20,00',
+      detalhes: ''
     }
   ];
 
@@ -95,9 +95,5 @@ export class CardCosseguradoraComponent implements OnInit {
       cliente: [''],
       cd: [''],
     });
-  }
-
-  navigate() {
-    this.router.navigate(['/detalhes']);
   }
 }

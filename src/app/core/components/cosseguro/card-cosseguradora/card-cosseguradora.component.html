@@ -11,72 +11,78 @@
           <div class="col-sm-3 buttons-div">
             <mat-icon class="buttonDownload">archive</mat-icon>
             <button mat-raised-button class="btn primary-button" color="primary">Lanç. Manual</button>
-            <button mat-raised-button class="btn primary-button" color="primary" routerLink="simulacoes">Simulações</button>
+            <button mat-raised-button class="btn primary-button" color="primary" routerLink="/simulacoes" (click)="false">Simulações</button>
           </div>
         </div>
       </div>
     </div>
 
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
+    <div class="container-fuild">
+      <div class="row">
+        <div class="col-sm-12">
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%; border-radius: 20px;">
 
-      <ng-container matColumnDef="status">
-        <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom bd-left bd-right" style="padding-left: 0 !important;"> Status </th>
-        <td mat-cell *matCellDef="let element" class="center bd-left bd-right" style="padding-left: 0 !important;"> {{ element.status }} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="tipoOperacao">
-        <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom bd-right"> Tipo Operação </th>
-        <td mat-cell *matCellDef="let element" class="center bd-right"> {{element.tipoOperacao}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="carta">
-        <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom bd-right"> Carta </th>
-        <td mat-cell *matCellDef="let element" class="center bd-right"> {{element.carta}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="dtStatus">
-        <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom bd-right"> Data Status </th>
-        <td mat-cell *matCellDef="let element" class="center bd-right"> {{element.dtStatus}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="ramo">
-        <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom bd-right"> Ramo </th>
-        <td mat-cell *matCellDef="let element" class="center bd-right"> {{element.ramo}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="apoliceSubapolice">
-        <th mat-header-cell *matHeaderCellDef class="center bd-bottom bd-right"> Apólice/Sub-Apólice </th>
-        <td mat-cell *matCellDef="let element" class="center bd-right"> {{ element.apoliceSubapolice }} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="endosso">
-        <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom bd-right"> Endosso </th>
-        <td mat-cell *matCellDef="let element" class="center bd-right"> {{ element.endosso }} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="parc">
-        <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom bd-right"> Parc. </th>
-        <td mat-cell *matCellDef="let element" class="center bd-right"> {{ element.parc }} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="sinistro">
-        <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom bd-right"> Sinistro </th>
-        <td mat-cell *matCellDef="let element" class="center bd-right"> {{ element.sinistro }} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="valor">
-        <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom bd-right"> Valor </th>
-        <td mat-cell *matCellDef="let element" class="center bd-right"> {{ element.valor }} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="detalhes">
-        <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom bd-right" style="padding-right: 0 !important;"> Detalhes </th>
-        <td mat-cell *matCellDef="let element" class="center bd-right" style="padding-right: 0 !important;">
-          <mat-icon class="green clickable-icon" (click)="navigate()">search</mat-icon>
-        </td>
-      </ng-container>
-
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef class="center bd-top bd-left bd-bottom-none" style="padding-left: 0 !important;"> Status </th>
+              <td mat-cell *matCellDef="let element" class="center bd-left" style="padding-left: 0 !important;"> {{ element.status }} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="tipoOperacao">
+              <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom-none"> Tipo - Operação </th>
+              <td mat-cell *matCellDef="let element" class="center"> {{element.tipoOperacao}} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="carta">
+              <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom-none"> Carta </th>
+              <td mat-cell *matCellDef="let element" class="center"> {{element.carta}} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="dtStatus">
+              <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom-none"> Data Status </th>
+              <td mat-cell *matCellDef="let element" class="center"> {{element.dtStatus}} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="ramo">
+              <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom-none"> Ramo </th>
+              <td mat-cell *matCellDef="let element" class="center"> {{element.ramo}} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="apoliceSubapolice">
+              <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom-none"> Apólice/Sub-Apólice </th>
+              <td mat-cell *matCellDef="let element" class="center"> {{ element.apoliceSubapolice }} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="endosso">
+              <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom-none"> Endosso </th>
+              <td mat-cell *matCellDef="let element" class="center"> {{ element.endosso }} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="parc">
+              <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom-none"> Parc. </th>
+              <td mat-cell *matCellDef="let element" class="center"> {{ element.parc }} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="sinistro">
+              <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom-none"> Sinistro </th>
+              <td mat-cell *matCellDef="let element" class="center"> {{ element.sinistro }} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="valor">
+              <th mat-header-cell *matHeaderCellDef class="center bd-top bd-bottom-none"> Valor </th>
+              <td mat-cell *matCellDef="let element" class="center"> {{ element.valor }} </td>
+            </ng-container>
+      
+            <ng-container matColumnDef="detalhes">
+              <th mat-header-cell *matHeaderCellDef class="center bd-top bd-right bd-bottom-none" style="padding-right: 0 !important;"> Detalhes </th>
+              <td mat-cell *matCellDef="let element" class="center bd-right" style="padding-right: 0 !important;">
+                <mat-icon class="green clickable-icon" routerLink="/detalhes" (click)="false">search</mat-icon>
+              </td>
+            </ng-container>
+      
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+      </div>
+    </div>    
   </div>

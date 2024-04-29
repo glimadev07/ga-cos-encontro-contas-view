@@ -17,7 +17,6 @@ export class SimulacoesModalComponent implements OnInit {
   dataSelecionada?: Date;
 
   constructor(public dialogRef: MatDialogRef<SimulacoesModalComponent>,
-    private dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -27,14 +26,7 @@ export class SimulacoesModalComponent implements OnInit {
   }
 
   openModalResult() {
-
-    this.dialog.open(SimulacoesModalResultComponent, {
-      panelClass: 'myapp-no-padding-dialog',
-      maxWidth: '95vw',
-      width: '100%',
-      height: '95%',
-
-    });
+    this.fecharModal();
   }
 
 

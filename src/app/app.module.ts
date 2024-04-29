@@ -33,7 +33,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HomeComponent } from './core/components/home/home.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { DetalhesComponent } from './core/components/detalhes/detalhes.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -72,7 +76,8 @@ import { DetalhesComponent } from './core/components/detalhes/detalhes.component
     MatNativeDateModule,
     MatExpansionModule,
     MatCheckboxModule,
-    MatStepperModule
+    MatStepperModule,
+    MatPaginatorModule
   ],
   providers: [    {
     provide: STEPPER_GLOBAL_OPTIONS,

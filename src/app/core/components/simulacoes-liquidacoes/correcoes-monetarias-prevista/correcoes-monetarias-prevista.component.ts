@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { SimulacoesModalComponent } from './simulacoes-modal/simulacoes-modal.component';
+import { MatPaginator } from '@angular/material/paginator';
 
 
 const mocks = [
@@ -187,6 +188,15 @@ export class CorrecoesMonetariasPrevistaComponent implements OnInit {
   displayedColumns: string[] = ['seq', 'tipo', 'dtCorMon', 'oprOrig', 'ramo','apoliceSubApol','endosso','parc','sinistrado','valor','cd'];
   dataSource = new MatTableDataSource<any>([]);
   mocksCalculator: any;
+
+  pageSizeOptions: number[] = [5, 10, 20];
+
+  @ViewChild(MatPaginator)
+  paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 
   constructor(private dialog: MatDialog) { }
 
