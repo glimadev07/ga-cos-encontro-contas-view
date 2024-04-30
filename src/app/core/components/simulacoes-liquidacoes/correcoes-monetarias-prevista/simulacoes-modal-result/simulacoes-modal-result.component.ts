@@ -124,7 +124,7 @@ export class SimulacoesModalResultComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.displayedColumns = ['select', 'ramo', 'cAceito', 'cCecido', 'cAceito2', 'cCecido2', 'cAceito3', 'cCecido3', 'totalPagar', 'totalReceber', 'resultadoFinal'];
+    this.displayedColumns = ['ramo', 'cAceito', 'cCecido', 'cAceito2', 'cCecido2', 'cAceito3', 'cCecido3', 'totalPagar', 'totalReceber', 'resultadoFinal'];
     this.displayedColumns2 = this.displayedColumns.map(x => `f2_${x}`);
     this.displayedColumns3 = this.displayedColumns.map(x => `f3_${x}`);
     this.displayedColumns4 = this.displayedColumns.map(x => `f4_${x}`);

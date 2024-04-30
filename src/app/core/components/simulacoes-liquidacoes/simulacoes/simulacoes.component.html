@@ -8,83 +8,83 @@
         </mat-panel-title>
       </mat-expansion-panel-header>
       <div class="container-table col-12">
-          <div style="display: flex; text-align: center;" class="col-12">
-            <div class="col-5"></div>
-            <div class="col-2">
-              <p style="border-bottom: 2px solid #00a587; width: 95%;">Total à:</p>
-            </div>
-            <div class="col-5"></div>
+        <div style="display: flex; text-align: center;" class="col-12">
+          <div class="col-5"></div>
+          <div class="col-2">
+            <p style="border-bottom: 2px solid #00a587; width: 95%;">Total à:</p>
           </div>
-          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 col-12">
-
-            <ng-container matColumnDef="numero">
-              <th mat-header-cell *matHeaderCellDef class="col-1"> Número </th>
-              <td mat-cell *matCellDef="let element"> {{element.numero}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="sts">
-              <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Sts </th>
-              <td mat-cell *matCellDef="let element" class="descriptiveText"> {{element.sts}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="dtStatus">
-              <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Dt. Status </th>
-              <td mat-cell *matCellDef="let element" class="descriptiveText"> {{element.dtStatus}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="tpSim">
-              <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Tp. Sim. </th>
-              <td mat-cell *matCellDef="let element" class="descriptiveText"> {{element.tpSim}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="dtPrevLiq">
-              <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Dt. Prev. Liq </th>
-              <td mat-cell *matCellDef="let element" class="descriptiveText"> {{element.dtPrevLiq}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="pagar">
-              <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Pagar </th>
-              <td mat-cell *matCellDef="let element" class="monetary"> {{element.pagar| currency:'BRL' }} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="receber">
-              <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Receber </th>
-              <td mat-cell *matCellDef="let element" class="monetary"> {{element.receber| currency:'BRL' }} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="resultado">
-              <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Resultado </th>
-              <td mat-cell *matCellDef="let element" class="monetary"> {{element.resultado | currency:'BRL'}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="pr">
-              <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> P/R </th>
-              <td mat-cell *matCellDef="let element" class="monetary"> {{element.pr | currency:'BRL'}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="fatura">
-              <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Fatura </th>
-              <td mat-cell *matCellDef="let element" class="monetary"> {{element.fatura | currency:'BRL'}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="obrigacao">
-              <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Obrigação </th>
-              <td mat-cell *matCellDef="let element" class="monetary"> {{element.obrigacao | currency:'BRL'}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="tpLiq">
-              <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Tp. Liq. </th>
-              <td mat-cell *matCellDef="let element" class="descriptiveText"> {{element.tpLiq}} </td>
-            </ng-container>
-
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-
-          <mat-paginator [pageSizeOptions]="pageSizeOptions" showFirstLastButtons
-            aria-label="Select page of periodic elements">
-          </mat-paginator>
+          <div class="col-5"></div>
         </div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 col-12">
+
+          <ng-container matColumnDef="numero">
+            <th mat-header-cell *matHeaderCellDef class="col-1"> Número </th>
+            <td mat-cell *matCellDef="let element"> {{element.numero}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="sts">
+            <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Sts </th>
+            <td mat-cell *matCellDef="let element" class="descriptiveText"> {{element.sts}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="dtStatus">
+            <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Dt. Status </th>
+            <td mat-cell *matCellDef="let element" class="descriptiveText"> {{element.dtStatus}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="tpSim">
+            <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Tp. Sim. </th>
+            <td mat-cell *matCellDef="let element" class="descriptiveText"> {{element.tpSim}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="dtPrevLiq">
+            <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Dt. Prev. Liq </th>
+            <td mat-cell *matCellDef="let element" class="descriptiveText"> {{element.dtPrevLiq}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="pagar">
+            <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Pagar </th>
+            <td mat-cell *matCellDef="let element" class="monetary"> {{element.pagar| currency:'BRL' }} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="receber">
+            <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Receber </th>
+            <td mat-cell *matCellDef="let element" class="monetary"> {{element.receber| currency:'BRL' }} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="resultado">
+            <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Resultado </th>
+            <td mat-cell *matCellDef="let element" class="monetary"> {{element.resultado | currency:'BRL'}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="pr">
+            <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> P/R </th>
+            <td mat-cell *matCellDef="let element" class="monetary"> {{element.pr | currency:'BRL'}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="fatura">
+            <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Fatura </th>
+            <td mat-cell *matCellDef="let element" class="monetary"> {{element.fatura | currency:'BRL'}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="obrigacao">
+            <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Obrigação </th>
+            <td mat-cell *matCellDef="let element" class="monetary"> {{element.obrigacao | currency:'BRL'}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="tpLiq">
+            <th mat-header-cell *matHeaderCellDef class="col-1 infoValue"> Tp. Liq. </th>
+            <td mat-cell *matCellDef="let element" class="descriptiveText"> {{element.tpLiq}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="pageSizeOptions" showFirstLastButtons
+          aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </div>
     </mat-expansion-panel>
   </mat-accordion>
 </div>

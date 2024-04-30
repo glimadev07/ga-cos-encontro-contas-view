@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-simulacoes-liquidacoes',
   templateUrl: './simulacoes-liquidacoes.component.html',
@@ -11,5 +10,4 @@ export class SimulacoesLiquidacoesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

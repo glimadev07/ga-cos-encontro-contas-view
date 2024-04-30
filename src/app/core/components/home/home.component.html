@@ -4,15 +4,24 @@
   </div>
 
   <section>
-    <mat-stepper [@.disabled]="true" orientation="vertical" linear #stepper>
-      <mat-step completed="false" label="Consulta" state="edit">
+    <mat-stepper orientation="vertical" linear #stepper [selectedIndex]="selectedStepIndex">
+
+      <mat-step  completed="false" editable="{{ checkRoute() >= 0 ? false : true }}" label="Consulta"
+        state="{{ checkRoute() === 0 ? 'done' : 'none' }}">
       </mat-step>
 
-      <mat-step completed="false" label="Simulações/Liquidações" state="edit">
-      </mat-step>
-
-      <mat-step completed="false" label="Resultado da Simulação" state="edit">
-      </mat-step>
+      <div *ngIf="checkRoute() === 1">
+        <mat-step completed="false" label="Detalhes" state="{{ checkRoute() === 1 ? 'done' : 'none' }}">
+        </mat-step>
+      </div>
+      <div *ngIf="checkRoute() >= 2">
+        <mat-step completed="false" label="Simulações/Liquidações" state="{{ checkRoute() === 2 ? 'done' : 'none' }}">
+        </mat-step>
+      </div>
+      <div *ngIf="checkRoute() === 3">
+        <mat-step completed="false" label="Resultado da Simulação" state="{{ checkRoute() === 3 ? 'done' : 'none' }}">
+        </mat-step>
+      </div>
 
       <ng-template matStepperIcon="none">
         <mat-icon></mat-icon>
@@ -23,7 +32,6 @@
       <ng-template matStepperIcon="edit">
         <mat-icon>edit</mat-icon>
       </ng-template>
-
     </mat-stepper>
   </section>
 
