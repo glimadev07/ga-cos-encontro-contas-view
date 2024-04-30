@@ -2,21 +2,25 @@
   padding: 0 25px;
   color: #40bca5;
 }
+
 .infos {
   display: flex;
   border: 1px solid #cdcdcd;
   border-radius: 8px;
   padding: 20px 25px;
 }
+
 .infosExpand {
   display: flex;
   border: 1px solid #cdcdcd;
   border-radius: 8px 8px 0px 0px;
   padding: 20px 25px;
 }
+
 .infos-input {
   display: flex;
   gap: 30px;
+
   input {
     border: 1px solid #cdcdcd;
     border-radius: 3px;
@@ -26,6 +30,7 @@
     height: 34px;
   }
 }
+
 .infos-button {
   display: flex;
   justify-content: end;

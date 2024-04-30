@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { SimulacoesModalResultComponent } from '../simulacoes-modal-result/simulacoes-modal-result.component';
-
-
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-simulacoes-modal',
@@ -21,6 +18,7 @@ export class SimulacoesModalComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   fecharModal(): void {
     this.dialogRef.close();
   }
@@ -28,7 +26,6 @@ export class SimulacoesModalComponent implements OnInit {
   openModalResult() {
     this.fecharModal();
   }
-
 
   dateChanged(event: any) {
     this.dataSelecionada = event.value;

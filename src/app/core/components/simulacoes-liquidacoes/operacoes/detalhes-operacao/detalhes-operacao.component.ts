@@ -28,7 +28,4 @@ export class DetalhesOperacaoComponent implements OnInit {
   ngOnInit(): void {
     this.dataSource.data = mocks;
   }
-
-
-
 }

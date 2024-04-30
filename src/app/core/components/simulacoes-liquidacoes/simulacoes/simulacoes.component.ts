@@ -141,7 +141,4 @@ export class SimulacoesComponent implements OnInit {
   ngOnInit(): void {
     this.dataSource.data = mocks;
   }
-
-
-
 }

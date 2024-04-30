@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-cosseguradora',
@@ -32,7 +31,7 @@ export class CardCosseguradoraComponent implements OnInit {
     }
   ];
 
-  constructor(private formBuilder: UntypedFormBuilder, private router:Router) { }
+  constructor(private formBuilder: UntypedFormBuilder) { }
 
   ngOnInit(): void {
     this.cosseguroForm = this.formBuilder.group({
