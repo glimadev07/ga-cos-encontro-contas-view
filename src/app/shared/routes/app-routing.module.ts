@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CosseguroComponent } from 'src/app/core/components/cosseguro/cosseguro.component';
-import { DetalhesComponent } from 'src/app/core/components/detalhes/detalhes.component';
-import { SimulacoesModalResultComponent } from 'src/app/core/components/simulacoes-liquidacoes/correcoes-monetarias-prevista/simulacoes-modal-result/simulacoes-modal-result.component';
-import { SimulacoesLiquidacoesComponent } from 'src/app/core/components/simulacoes-liquidacoes/simulacoes-liquidacoes.component';
+import { CosseguroComponent } from 'src/app/modules/cosseguro/components/cosseguro.component';
+import { DetalhesComponent } from 'src/app/modules/detalhes/components/detalhes.component';
+import { SimulacoesModalResultComponent } from 'src/app/modules/simulacoes-liquidacoes/components/correcoes-monetarias-prevista/simulacoes-modal-result/simulacoes-modal-result.component';
+import { SimulacoesLiquidacoesComponent } from 'src/app/modules/simulacoes-liquidacoes/components/simulacoes-liquidacoes.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/cosseguro', pathMatch: 'full' },
