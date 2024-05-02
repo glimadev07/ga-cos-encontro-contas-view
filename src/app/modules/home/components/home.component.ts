@@ -8,15 +8,11 @@ import { Router } from '@angular/router';
 
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   selectedStepIndex: number = 0;
 
   constructor(private router: Router) { }
-
-  ngOnInit(): void {
-
-  }
 
   checkRoute(): number {
     if (this.router.url === '/detalhes') return 1;
