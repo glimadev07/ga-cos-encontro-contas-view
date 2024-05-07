@@ -30,5 +30,4 @@ export class SimulacoesModalComponent implements OnInit {
   dateChanged(event: any) {
     this.dataSelecionada = event.value;
   }
-
 }

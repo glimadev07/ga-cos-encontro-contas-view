@@ -15,24 +15,28 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DetalhesComponent } from './components/detalhes.component';
+import { RouterModule, Routes } from '@angular/router';
 import { SinistroModule } from '../sinistro/sinistro.module';
 import { ApoliceModule } from '../apolice/apolice.module';
 import { SimulacoesLiquidacoesModule } from '../simulacoes-liquidacoes/simulacoes-liquidacoes.module';
 import { ComissaoModule } from '../comissao/comissao.module';
 
+
+const routes: Routes = [
+  { path: 'detalhes', component: DetalhesComponent},
+];
+
 @NgModule({
   declarations: [
-    DetalhesComponent
+    DetalhesComponent,
   ],
   imports: [
     CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
+    RouterModule.forChild(routes),
     MatSliderModule,
     FormsModule,
+    RouterModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
@@ -57,3 +61,5 @@ import { ComissaoModule } from '../comissao/comissao.module';
   ]
 })
 export class DetalhesModule { }
+
+

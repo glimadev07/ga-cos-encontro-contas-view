@@ -15,9 +15,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SinistroComponent } from './components/sinistro.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { SinistroComponent } from './components/sinistro.component';
   ],
   imports: [
     CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
+    RouterModule,
     MatSliderModule,
     FormsModule,
     MatButtonModule,

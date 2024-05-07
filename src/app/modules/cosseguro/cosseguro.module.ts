@@ -15,12 +15,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from 'src/app/shared/routes/app-routing.module';
 import { CosseguroComponent } from './components/cosseguro.component';
 import { CardCosseguroComponent } from './components/card-cosseguro/card-cosseguro.component';
 import { CardCosseguradoraComponent } from './components/card-cosseguradora/card-cosseguradora.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -30,10 +28,8 @@ import { CardCosseguradoraComponent } from './components/card-cosseguradora/card
   ],
   imports: [
     CommonModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
     MatSliderModule,
+    RouterModule,
     FormsModule,
     MatButtonModule,
     MatFormFieldModule,

@@ -15,10 +15,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from 'src/app/shared/routes/app-routing.module';
 import { ApoliceComponent } from './components/apolice.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -26,9 +24,7 @@ import { ApoliceComponent } from './components/apolice.component';
   ],
   imports: [
     CommonModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    RouterModule,
     MatSliderModule,
     FormsModule,
     MatButtonModule,

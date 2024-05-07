@@ -15,8 +15,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SimulacoesLiquidacoesComponent } from './components/simulacoes-liquidacoes.component';
 import { SimulacoesComponent } from './components/simulacoes/simulacoes.component';
 import { OperacoesComponent } from './components/operacoes/operacoes.component';
@@ -24,6 +22,15 @@ import { CorrecoesMonetariasPrevistaComponent } from './components/correcoes-mon
 import { SimulacoesModalComponent } from './components/correcoes-monetarias-prevista/simulacoes-modal/simulacoes-modal.component';
 import { SimulacoesModalResultComponent } from './components/correcoes-monetarias-prevista/simulacoes-modal-result/simulacoes-modal-result.component';
 import { DetalhesOperacaoComponent } from './components/operacoes/detalhes-operacao/detalhes-operacao.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', component: SimulacoesLiquidacoesComponent, children: [
+    { path: 'correcoesMonetarias', component: CorrecoesMonetariasPrevistaComponent },
+    { path: 'operacoes', component: OperacoesComponent },
+    { path: 'simulacoes', component: SimulacoesComponent },
+  ]},
+];
 
 @NgModule({
   declarations: [
@@ -37,9 +44,9 @@ import { DetalhesOperacaoComponent } from './components/operacoes/detalhes-opera
   ],
   imports: [
     CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
+    RouterModule.forChild(routes),
     MatSliderModule,
+    RouterModule,
     FormsModule,
     MatButtonModule,
     MatFormFieldModule,

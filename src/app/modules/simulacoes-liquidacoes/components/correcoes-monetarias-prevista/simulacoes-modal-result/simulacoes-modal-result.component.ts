@@ -1,9 +1,7 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-
 
 
 export interface PeriodicElement {
@@ -121,7 +119,8 @@ export class SimulacoesModalResultComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.displayedColumns = ['ramo', 'cAceito', 'cCecido', 'cAceito2', 'cCecido2', 'cAceito3', 'cCecido3', 'totalPagar', 'totalReceber', 'resultadoFinal'];
