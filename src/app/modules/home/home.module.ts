@@ -15,9 +15,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,9 +24,8 @@ import { HomeComponent } from './components/home.component';
   ],
   imports: [
     CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
     MatSliderModule,
+    RouterModule,
     FormsModule,
     MatButtonModule,
     MatFormFieldModule,

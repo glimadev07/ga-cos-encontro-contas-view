@@ -15,9 +15,9 @@ export class HomeComponent {
   constructor(private router: Router) { }
 
   checkRoute(): number {
-    if (this.router.url === '/detalhes') return 1;
+    if (this.router.url === '/detalhe/detalhes') return 1;
     if (this.router.url === '/simulacoes') return 2;
-    else if (this.router.url === '/resultado') return 3;
+    else if (this.router.url === '/simulacoes/correcoesMonetarias/resultado') return 3;
     else return 0;
   }
 
