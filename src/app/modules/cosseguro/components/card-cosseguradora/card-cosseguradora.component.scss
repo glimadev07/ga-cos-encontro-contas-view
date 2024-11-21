@@ -27,7 +27,7 @@
 }
 .infos-button {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   gap: 20px;
   padding-right: 34px;
@@ -131,7 +131,7 @@
 
 .buttons-div {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   padding: 0 0 25px 0;
 }
